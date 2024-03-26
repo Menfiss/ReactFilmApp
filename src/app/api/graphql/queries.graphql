@@ -1,0 +1,43 @@
+query GetMovies {
+  movies {
+    id
+    genre
+    director
+    actors
+    imageUrl
+    title
+    year
+    description
+    poster
+    trailerUrl
+  }
+}
+
+query GetMovie($id: String!) {
+  movie(id: $id){
+    actors
+    director
+    genre
+    id
+    imageUrl
+    title
+    year
+    description
+    poster
+    trailerUrl
+    rating
+  }
+}
+
+query GetMovieImage($id: String!){
+  movie(id: $id) {
+    imageUrl
+  }
+}
+
+query GetGenre{
+  movies {
+    id
+    genre
+  }
+}
